@@ -19,20 +19,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 print("Connect ran successfully");
-/*
+
 // Extract the form data using $_POST
-$department = $_POST["Department"];
-$journals = $_POST["Journals"];
-$row = $_POST["Row"];
-$number = $_POST["Number"];
-$quality = $_POST["Quality"];
+$department = $_POST["department"];
+$journals = $_POST["journals"];
+$quality = $_POST["quality"];
 
 // Construct the SQL INSERT statement
-$sql = "INSERT INTO Publication (Department, Journals, 'Row', 'Number', Quality)
-        VALUES ('$department', '$journals', '$row', '$number', '$quality')";
-*/
+$sql = "INSERT INTO PublicationTest (Department, Journals, Quality)
+        VALUES ('$department', '$journals', '$quality')";
+/*
 $sql = "SELECT * FROM INTO Publication (Department, Journals, 'Row', 'Number', Quality)
         VALUES ('$department', '$journals', '$row', '$number', '$quality')";
+        */
 // Execute the SQL statement and check for errors
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
